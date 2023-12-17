@@ -1,6 +1,7 @@
-require('dotenv').config()
+// require('dotenv').config()
+import express from 'express'
 
-const express = require('express')
+// const express = require('express')
 const app = express()
 
 const port = 4000
@@ -23,9 +24,6 @@ app.get('/youtube123',(req,res)=>{  // if we wan t to send the json data
   res.json({ username: 'Flavio' })
 })
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT||3000, () => {
   console.log(`Example app listening on port ${port}`)
 })
-// app.listen(port,()=>{
-
-// })
